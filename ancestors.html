@@ -45,7 +45,7 @@
 
         $(document).ready(() => {
 
-            $("span").parent("div").css({ "color": "red", "border":"2px solid red" });
+            $("span").parents("div.ancestors").css({ "color": "blue", "border":"2px solid blue" });
             $("div.ancestors").find("span").css({ "color": "green", "border-color": "green" });
 
         });
