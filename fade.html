@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <p>Demostración de los método fade en jQuery.</p>
+
+        <button>Click para ver el efecto con diferentes parámetros.</button>
+
+        <br>
+        <br>
+
+        <div id="1" style="width:80px;height: 80px;display: none; background-color: red;"></div><br>
+        <div id="2" style="width:80px;height: 80px;display: none; background-color: green;"></div><br>
+        <div id="3" style="width:80px;height: 80px;display: none; background-color: blue;"></div><br>
+
+        <script>
+
+            $(document).ready(() => {
+
+                $("button").on("click", () => {
+
+                    $("#1").fadeTo("fast", 1);
+                    $("#2").fadeTo("slow", 0.5);
+                    $("#3").fadeTo(3000, 0.8);
+
+                    // $("#1").fadeIn(() => {
+                    //     console.log('elemento 1 mostrado');
+                    //     $("#1").fadeOut(2000, ()=> {
+                    //         console.log('elemento 1 ocultado');
+                    //     });
+                    // });
+                    // $("#2").fadeIn(2000, () => {
+                    //     $("#2").fadeOut('slow', ()=> {
+                    //         console.log('elemento 2 ocultado');
+                    //     });
+                    // });
+                    // $("#3").fadeIn('slow', () => {
+                    //     $("#3").fadeOut('fast', ()=> {
+                    //         console.log('elemento 3 ocultado');
+                    //     });
+                    // });
+
+                });       
+
+            })
+
+        </script>
+
+    </body>
+</html>

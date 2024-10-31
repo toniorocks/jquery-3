@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <style>
+            div {
+                position: absolute;
+                background-color:rgb(0, 255, 13);
+                margin-top: 50px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <button id="comenzar">Comenzar Animación</button>
+        <button id="detener">Detener Animación</button>
+
+        <p>Por defecto, todos los elementos tienen una posición estática. Para manipular la posición recuerda primero agregar la propiedad en relativo, fija o absoluta CSS del elemento</p>
+
+        <div style="height: 100px; width: 100px;">Hola</div>
+
+        <script>
+
+            $(document).ready(() => {
+
+                $("#comenzar").on("click", () => {
+
+                    let div  = $("div");
+                    div.animate({ left: '100px'}, 3000);
+                    div.animate({ fontSize: '3em'}, 3000);
+                    div.animate({ left: '200px'}, 3000);
+                    div.animate({ left: '50px'}, 3000);
+                    div.animate({ left: '0px'}, 3000);
+
+                });
+
+                $("#detener").on("click", () => {
+
+                    $("div").stop(true, true); //primer parametro: borrar la cola de animaciones, segundo parametro: saltar a la animación final
+
+                })
+
+            })
+
+        </script>
+
+    </body>
+</html>

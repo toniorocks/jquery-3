@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <p>jQuery es divertido!</p>
+        <button>Haz Click</button>
+
+        <script>
+            $(document).ready(() => {
+
+                $("button").on("click", () => {
+
+                    $("p")
+                    .css("color", "red")
+                    .slideUp(2000)
+                    .slideDown(2000);
+
+                })
+
+            })
+        </script>
+    </body>
+</html>

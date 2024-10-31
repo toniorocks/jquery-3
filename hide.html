@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>Voy a desaparecer</p>
+        <button id="hide">Ocultar</button>
+        <button id="show">Mostrar</button>
+
+        <button id="toggle">Alternar</button>
+
+        <script>
+
+            $(document).ready(() => {
+
+                $("#hide").on("click", () => {
+                    $("p").hide(1000);
+                })
+
+                $("#show").on("click", () => {
+                    $("p").show(500);
+                })
+
+                $("#toggle").on("click", () => {
+                    $("p").toggle(2000);
+                })
+
+            })
+
+        </script>
+
+    </body>
+</html>
